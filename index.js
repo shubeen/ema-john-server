@@ -11,7 +11,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-const port = 4000
+const port = 40004
+
+app.get('/', (req, res) => {
+    res.send("hello its working")
+})
 
 
 
