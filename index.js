@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-const port = 40004
+const port = 4000
 
 app.get('/', (req, res) => {
     res.send("hello its working")
@@ -68,6 +68,5 @@ client.connect(err => {
     })
 
 });
-
 
 app.listen(process.env.PORT || port)
