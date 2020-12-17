@@ -10,14 +10,11 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 app.use(bodyParser.json());
 app.use(cors());
 
-
 const port = 4000
 
 app.get('/', (req, res) => {
     res.send("hello its working")
 })
-
-
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
